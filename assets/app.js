@@ -62,7 +62,11 @@
     return Promise.all([buscar(p.trilhas), buscar(p.treinamentos), p.categorias ? buscar(p.categorias) : Promise.resolve('')])
       .then(function (r) {
         var cats = r[2] ? csv(r[2]).map(function (x) { return x.categoria; }).filter(Boolean) : [];
-        return { trilhas: csv(r[0]), treinamentos: csv(r[1]), categorias: cats };
+        var d = { trilhas: csv(r[0]), treinamentos: csv(r[1]), categorias: cats };
+        // se a planilha vier vazia ou com cabeçalhos alterados, usa o conteúdo de reserva
+        var ok = d.trilhas.length && d.treinamentos.length && 'id' in d.trilhas[0] && 'codigo' in d.treinamentos[0] && 'trilha' in d.treinamentos[0];
+        if (!ok) { console.warn('Planilha de conteúdo inválida; usando dados/conteudo.json'); return local; }
+        return d;
       })
       .catch(function () { return local; });
   }
