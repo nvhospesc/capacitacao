@@ -191,3 +191,34 @@ dialog::backdrop{background:rgba(10,20,40,.45)}
 .rodape img{opacity:.85;height:28px;width:auto;margin-bottom:8px}
 .mini{font-size:.78rem}
 .toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:var(--txt);color:var(--sup);padding:10px 16px;border-radius:12px;font-weight:700;font-size:.9rem;z-index:50}
+
+/* objetivos, passo a passo e casos */
+.objetivos{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.objetivos li{display:flex;gap:10px;align-items:flex-start}
+.objetivos li svg{color:var(--azul);margin-top:4px}
+.passos{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.passos label{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border-radius:12px;background:var(--sup-2);cursor:pointer}
+.passos input{position:absolute;opacity:0;width:1px;height:1px}
+.passos .num{flex:none;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;border:2px solid var(--azul);color:var(--azul);font-weight:800;font-size:.85rem}
+.passos input:checked + .num{background:var(--verde);border-color:var(--verde);color:#fff}
+.passos input:checked ~ span:last-child{color:var(--txt-3);text-decoration:line-through}
+.passos input:focus-visible + .num{outline:3px solid var(--azul);outline-offset:2px}
+.casos{display:grid;gap:12px}
+.caso{border:1px solid var(--borda);border-radius:14px;padding:16px;background:var(--sup)}
+.caso .situacao{margin:0 0 10px}
+.caso summary{cursor:pointer;font-weight:800;color:var(--azul);list-style:none;display:inline-flex;align-items:center;gap:6px}
+.caso summary::-webkit-details-marker{display:none}
+.caso summary::before{content:"▸";transition:transform .2s}
+.caso details[open] summary::before{transform:rotate(90deg)}
+.caso details p{margin:10px 0 0;padding:12px 14px;border-radius:10px;background:var(--verde-claro);font-weight:600}
+/* impressão */
+@media print{
+  .topo,.barra-inferior,.rodape,.lateral,.voltar,#quiz-area,.hero-busca{display:none!important}
+  body{background:#fff;padding:0}
+  .treino{display:block}
+  .card{box-shadow:none;break-inside:avoid}
+  .caso details>*{display:block}
+  .flip{height:auto;break-inside:avoid}
+  .flip-in{transform:none!important}
+  .flip-f,.flip-v{position:static;transform:none;backface-visibility:visible;margin-bottom:6px}
+}

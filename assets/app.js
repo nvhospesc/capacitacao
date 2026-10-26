@@ -23,6 +23,7 @@
     return lista(v).map(function (l) { var i = l.indexOf('::'); return i < 0 ? [l, ''] : [l.slice(0, i).trim(), l.slice(i + 2).trim()]; });
   }
   function semAcento(s) { return String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase(); }
+  function dataBR(d) { var m = String(d || '').match(/^(\d{4})-(\d{2})-(\d{2})/); return m ? m[3] + '/' + m[2] + '/' + m[1] : String(d || ''); }
   var mem = {};
   function ler(k, padrao) { try { var v = localStorage.getItem('nep-' + k); return v ? JSON.parse(v) : padrao; } catch (e) { return k in mem ? mem[k] : padrao; } }
   function gravar(k, v) { mem[k] = v; try { localStorage.setItem('nep-' + k, JSON.stringify(v)); } catch (e) { /* sem armazenamento */ } }
@@ -81,7 +82,8 @@
         versao: t.versao, publico: String(t.publico || '').split(';').map(function (s) { return s.trim(); }).filter(Boolean),
         tempo: Number(t.tempo) || 0, ativo: String(t.status || '').trim().toLowerCase() === 'ativo', atualizado: t.atualizado,
         porque: t.porque, pontos: lista(t.pontos), faca: lista(t.faca), naofaca: lista(t.naofaca),
-        consulta: pares(t.consulta), cards: pares(t.cards), quiz: url(t.quiz_url), popUrl: url(t.pop_url)
+        consulta: pares(t.consulta), cards: pares(t.cards), quiz: url(t.quiz_url), popUrl: url(t.pop_url),
+        objetivos: lista(t.objetivos), passos: lista(t.passos), casos: pares(t.casos)
       };
     });
     D.categorias = (d.categorias && d.categorias.length) ? d.categorias : [];
@@ -184,18 +186,27 @@
       '<h1 style="margin-top:10px">' + esc(t.titulo) + '</h1>' + (t.resumo ? '<p class="sub">' + esc(t.resumo) + '</p>' : '') +
       '<div class="badges"><span class="badge">' + ico('file') + esc(t.pop) + (t.versao ? ' · v' + esc(t.versao) : '') + '</span>' +
       (t.tempo ? '<span class="badge">' + ico('clock') + t.tempo + ' min</span>' : '') +
-      '<span class="badge">' + ico('users') + esc(t.publico.indexOf('TODAS') >= 0 ? 'Todos os profissionais' : t.publico.join(', ')) + '</span></div></div>';
+      '<span class="badge">' + ico('users') + esc(t.publico.indexOf('TODAS') >= 0 ? 'Todos os profissionais' : t.publico.join(', ')) + '</span>' +
+      (t.atualizado ? '<span class="badge">Atualizado em ' + esc(dataBR(t.atualizado)) + '</span>' : '') + '</div></div>';
     var popBtn = '<a class="btn btn-sec" target="_blank" rel="noopener" href="' + esc(t.popUrl || '#/biblioteca') + '">' + ico('file') + ' Abrir o documento completo</a>';
     if (!t.ativo) {
       return cab + '<div class="card vazio"><div class="ico" style="--cor:' + esc(tr.cor) + '">' + ico('clock') + '</div><h2>Treinamento em preparação</h2>' +
         '<p>O NEP está preparando este conteúdo. Enquanto isso, consulte o documento na Biblioteca.</p><div style="max-width:320px;margin:auto">' + popBtn + '</div></div>';
     }
     var blocos = '';
+    if (t.objetivos.length) blocos += '<section class="card bloco"><h2>Ao final você vai saber</h2><ul class="objetivos">' + t.objetivos.map(function (p) { return '<li>' + ico('check') + '<span>' + esc(p) + '</span></li>'; }).join('') + '</ul></section>';
     if (t.porque) blocos += '<section class="card bloco"><h2>Por que importa</h2><div class="callout">' + esc(t.porque) + '</div></section>';
     if (t.pontos.length) blocos += '<section class="card bloco"><h2>Pontos-chave</h2><ol class="pontos">' + t.pontos.map(function (p) { return '<li><span>' + esc(p) + '</span></li>'; }).join('') + '</ol></section>';
+    if (t.passos.length) {
+      var marc = ler('passos-' + t.codigo, {});
+      blocos += '<section class="card bloco"><h2>Passo a passo</h2><p class="sub">Marque cada etapa para treinar a sequência.</p><ol class="passos">' +
+        t.passos.map(function (p, i) { return '<li><label><input type="checkbox" data-passo="' + esc(t.codigo) + '" data-i="' + i + '"' + (marc[i] ? ' checked' : '') + '><span class="num">' + (i + 1) + '</span><span>' + esc(p) + '</span></label></li>'; }).join('') + '</ol></section>';
+    }
     if (t.faca.length || t.naofaca.length) blocos += '<section class="card bloco"><h2>Na prática</h2><div class="duas">' +
       '<div class="col-faca"><h3>Faça</h3><ul>' + t.faca.map(function (p) { return '<li>' + ico('check') + '<span>' + esc(p) + '</span></li>'; }).join('') + '</ul></div>' +
       '<div class="col-nao"><h3>Não faça</h3><ul>' + t.naofaca.map(function (p) { return '<li>' + ico('x') + '<span>' + esc(p) + '</span></li>'; }).join('') + '</ul></div></div></section>';
+    if (t.casos.length) blocos += '<section class="card bloco"><h2>Casos práticos</h2><p class="sub">Pense no que você faria e depois veja a conduta.</p><div class="casos">' +
+      t.casos.map(function (p, i) { return '<div class="caso"><p class="situacao"><strong>Situação ' + (i + 1) + '.</strong> ' + esc(p[0]) + '</p><details><summary>Ver a conduta</summary><p>' + esc(p[1]) + '</p></details></div>'; }).join('') + '</div></section>';
     if (t.consulta.length) blocos += '<section class="card bloco"><h2>Consulta rápida</h2><div style="overflow-x:auto"><table class="tabela"><thead><tr><th>Item</th><th>Conduta</th></tr></thead><tbody>' +
       t.consulta.map(function (p) { return '<tr><td>' + esc(p[0]) + '</td><td>' + esc(p[1]) + '</td></tr>'; }).join('') + '</tbody></table></div></section>';
     if (t.cards.length) blocos += '<section class="card bloco"><h2>Revisão rápida</h2><p class="sub">Toque no cartão para ver a resposta.</p><div class="flips">' +
@@ -260,7 +271,7 @@
     if (!termos.length) { res.innerHTML = '<div class="nada">Digite um tema, código ou número de POP.</div>'; return; }
     var achados = D.treinamentos.map(function (t) {
       var tr = trilha(t.trilha);
-      var alvo = semAcento([t.codigo, t.titulo, t.resumo, t.pop, tr && tr.titulo, t.pontos.join(' '), t.faca.join(' '), t.naofaca.join(' '), t.consulta.map(function (p) { return p.join(' '); }).join(' ')].join(' '));
+      var alvo = semAcento([t.codigo, t.titulo, t.resumo, t.pop, tr && tr.titulo, t.pontos.join(' '), t.passos.join(' '), t.objetivos.join(' '), t.faca.join(' '), t.naofaca.join(' '), t.consulta.map(function (p) { return p.join(' '); }).join(' ')].join(' '));
       var nota = termos.every(function (x) { return alvo.indexOf(x) >= 0; }) ? (semAcento(t.titulo).indexOf(termos[0]) >= 0 ? 2 : 1) + (t.ativo ? 1 : 0) : 0;
       return { t: t, tr: tr, nota: nota };
     }).filter(function (x) { return x.nota; }).sort(function (a, b) { return b.nota - a.nota; }).slice(0, 12);
@@ -295,6 +306,13 @@
       area.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   });
+  document.addEventListener('change', function (e) {
+    var el = e.target;
+    if (!el.hasAttribute || !el.hasAttribute('data-passo')) return;
+    var k = 'passos-' + el.getAttribute('data-passo'), m = ler(k, {});
+    if (el.checked) m[el.getAttribute('data-i')] = 1; else delete m[el.getAttribute('data-i')];
+    gravar(k, m);
+  });
   campo.addEventListener('input', function () { mostrarBusca(campo.value); });
   document.addEventListener('keydown', function (e) {
     if ((e.key === '/' || (e.key === 'k' && (e.ctrlKey || e.metaKey))) && !/input|textarea/i.test(document.activeElement.tagName)) { e.preventDefault(); abrirBusca(); }
@@ -306,6 +324,9 @@
   document.getElementById('sub').textContent = C.subtitulo || '';
   document.getElementById('contato').textContent = C.contato || '';
   main.innerHTML = '<div class="carregando">Carregando…</div>';
+  if ('serviceWorker' in navigator && location.protocol === 'https:') {
+    navigator.serviceWorker.register('sw.js').catch(function () { /* sem modo offline */ });
+  }
   carregar().then(function (d) { normalizar(d); rota(); })
     .catch(function () { main.innerHTML = '<div class="card vazio"><h2>Não foi possível carregar o conteúdo</h2><p>Verifique a conexão e tente novamente.</p></div>'; });
 })();

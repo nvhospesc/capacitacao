@@ -68,121 +68,704 @@
    "codigo": "MS-01",
    "trilha": "metas",
    "titulo": "Identificação correta do paciente",
-   "resumo": "Pulseira, dois identificadores e conferência antes de todo cuidado.",
+   "resumo": "Pulseira com dois identificadores, conferência ativa antes de todo cuidado e pulseira vermelha de alergia.",
    "pop": "POP 046; POP 014",
-   "versao": "",
+   "versao": "2",
    "publico": "TODAS",
-   "tempo": 10,
-   "status": "Em preparação",
-   "atualizado": "",
-   "porque": "",
-   "pontos": [],
-   "faca": [],
-   "naofaca": [],
-   "consulta": [],
-   "cards": [],
+   "tempo": 15,
+   "status": "Ativo",
+   "atualizado": "2026-10-26",
+   "porque": "A identificação correta é a Primeira Meta Internacional de Segurança do Paciente da OMS. Falhas de identificação estão por trás de eventos graves e evitáveis, como erro de medicação e cirurgia no local errado. O próprio paciente é a última barreira: ele deve confirmar seus dados antes de qualquer procedimento.",
+   "pontos": [
+    "Dois identificadores sempre: nome completo, sem abreviaturas, e data de nascimento. Número do leito nunca é identificador.",
+    "A pulseira traz nome completo do paciente, nome completo da mãe e data de nascimento. Vai no braço direito; se não for possível, siga o sentido horário: braço esquerdo, perna esquerda, perna direita.",
+    "Identificação ativa: peça ao paciente que diga ou leia seus dados, em vez de perguntar \"o senhor é o João?\".",
+    "Homônimos na mesma enfermaria: transferir um deles quando houver vaga. Se não der, destacar o nome diferenciador na placa em LETRAS MAIÚSCULAS E NEGRITO.",
+    "Alergia: pulseira VERMELHA com a inscrição \"ALERGIA\", no mesmo membro da pulseira de identificação. Ela complementa e nunca substitui a pulseira de identificação."
+   ],
+   "faca": [
+    "Confirmar nome completo e data de nascimento antes de cada cuidado.",
+    "Pedir que o paciente diga os próprios dados.",
+    "Conferir pulseira e prontuário na saída e na chegada de cada transferência.",
+    "Destacar homônimos na placa em maiúsculas e negrito.",
+    "Colocar pulseira vermelha assim que identificar uma alergia."
+   ],
+   "naofaca": [
+    "Usar o número do leito como identificador.",
+    "Perguntar \"o senhor é fulano?\" esperando um \"sim\".",
+    "Usar fita ou adesivo improvisado no lugar da pulseira de alergia.",
+    "Escrever \"nega alergias\" sem ter perguntado.",
+    "Colocar a pulseira sem conferir os dados com o paciente."
+   ],
+   "consulta": [
+    [
+     "Identificadores obrigatórios",
+     "Nome completo (sem abreviaturas) + data de nascimento"
+    ],
+    [
+     "Dados da pulseira",
+     "Nome do paciente, nome da mãe, data de nascimento"
+    ],
+    [
+     "Membro da pulseira",
+     "Braço direito; impedido: sentido horário (MSE, MIE, MID)"
+    ],
+    [
+     "Placa à beira do leito",
+     "HOSPESC, data de nascimento, data de internação, leito, nome completo"
+    ],
+    [
+     "Pulseira de alergia",
+     "Vermelha, com a inscrição ALERGIA, no mesmo membro"
+    ],
+    [
+     "Pulseira de alergia – onde buscar",
+     "Farmácia ou Administrativo"
+    ],
+    [
+     "Pulseira danificada ou perdida",
+     "Enfermeiro do setor substitui (pulseira em branco do NIR)"
+    ],
+    [
+     "Auditoria de alergia",
+     "NSP, mensal"
+    ]
+   ],
+   "cards": [
+    [
+     "Quais são os dois identificadores do HOSPESC?",
+     "Nome completo, sem abreviaturas, e data de nascimento."
+    ],
+    [
+     "Em que braço vai a pulseira?",
+     "No direito. Se não for possível: braço esquerdo, perna esquerda, perna direita (sentido horário)."
+    ],
+    [
+     "O que fazer com homônimos na mesma enfermaria?",
+     "Transferir um deles se houver vaga; se não, destacar o nome diferenciador na placa em maiúsculas e negrito."
+    ],
+    [
+     "A pulseira de alergia substitui a de identificação?",
+     "Não. Ela é complementar e fica no mesmo membro."
+    ]
+   ],
    "quiz_url": "",
-   "pop_url": "https://drive.google.com/file/d/16LaWJu58DbOPW1RHSROc-lFPuATWzBE-/view"
+   "pop_url": "https://drive.google.com/file/d/16LaWJu58DbOPW1RHSROc-lFPuATWzBE-/view",
+   "objetivos": [
+    "Identificar o paciente com nome completo e data de nascimento antes de qualquer cuidado.",
+    "Conferir pulseira e placa à beira do leito na admissão e nas transferências.",
+    "Agir corretamente em homônimos, emergências, recusa da pulseira e pacientes com alergia."
+   ],
+   "passos": [
+    "Receba do NIR a pulseira e a placa à beira do leito.",
+    "Peça ao paciente (ou acompanhante) que leia os dados da pulseira e confira com a placa e o prontuário.",
+    "Dados corretos: coloque a pulseira no braço direito (ou siga o sentido horário) e fixe a placa na parede da cabeceira.",
+    "Dados incorretos: não coloque. Corrija e solicite novos identificadores ao NIR.",
+    "Pergunte sobre alergias, dando exemplos (antibióticos, dipirona, contraste, alimentos, látex, esparadrapo). Se houver, coloque a pulseira vermelha.",
+    "Oriente paciente e acompanhante sobre o uso da pulseira durante toda a internação.",
+    "Antes de medicar, coletar exames, transportar ou transferir: confira a identidade com dois identificadores."
+   ],
+   "casos": [
+    [
+     "Paciente chega desacordado, sem documentos e sem acompanhante, com risco de morte.",
+     "Estabilize primeiro. Coloque pulseira provisória com os dados disponíveis (sexo presumido, data e hora de entrada) e troque pela pulseira padrão assim que os dados civis forem confirmados."
+    ],
+    [
+     "Paciente se recusa a usar a pulseira.",
+     "Explique os riscos. Se a recusa persistir, acione Serviço Social e/ou Psicologia. Mantida a recusa, registre no prontuário e informe na passagem de plantão como risco assistencial."
+    ],
+    [
+     "Durante o banho você nota que a pulseira está rasgada e ilegível.",
+     "Comunique o enfermeiro do setor, que solicita pulseira em branco ao NIR, preenche e confere os dados com o paciente ou acompanhante."
+    ],
+    [
+     "Paciente com alergia a dipirona está sem pulseira vermelha porque acabou no setor.",
+     "A falta de pulseira não justifica: busque na Farmácia ou no Administrativo e coloque imediatamente. Até lá, sinalize no prontuário e avise a equipe."
+    ]
+   ]
   },
   {
    "codigo": "MS-02",
    "trilha": "metas",
    "titulo": "Comunicação efetiva e passagem de plantão (SBAR)",
-   "resumo": "Comunicação segura entre profissionais e passagem de plantão estruturada.",
+   "resumo": "SBAR, comunicação em circuito fechado, resultados críticos e passagem de plantão sem omissões.",
    "pop": "POP 055; POP 056",
-   "versao": "",
+   "versao": "1.0",
    "publico": "Enfermeiro(a);Técnico(a) de enfermagem;Médico(a);Fisioterapeuta;Estagiário(a)",
-   "tempo": 10,
-   "status": "Em preparação",
-   "atualizado": "",
-   "porque": "",
-   "pontos": [],
-   "faca": [],
-   "naofaca": [],
-   "consulta": [],
-   "cards": [],
+   "tempo": 15,
+   "status": "Ativo",
+   "atualizado": "2026-10-26",
+   "porque": "Informações incompletas, ambíguas ou sem confirmação comprometem o tratamento e a continuidade do cuidado. A troca de turno e de setor é o momento em que mais se perde informação; a comunicação estruturada reduz omissões e garante que alguém assuma cada pendência.",
+   "pontos": [
+    "SBAR: S – Situação atual; B – Antecedentes relevantes; A – Avaliação; R – Recomendações e solicitações.",
+    "Circuito fechado: o receptor repete identificação, conteúdo, valores, unidades e ação esperada; o emissor confirma ou corrige. Mensagem enviada não é mensagem recebida.",
+    "Use dados, não impressões: valores com unidade, horário e tendência. Evite \"está ruim\" sem dados.",
+    "Ordem verbal ou telefônica só em urgência: quem recebe registra e repete medicamento, dose, unidade, via e frequência; o prescritor formaliza assim que possível.",
+    "Na deterioração, acione imediatamente a equipe médica. Sem resposta, escale para substituto, coordenação e direção de plantão. Não espere retorno de aplicativo em emergência.",
+    "Toda pendência tem responsável e horário de reavaliação. Dado não investigado é \"pendente\", nunca \"sem alergias\"."
+   ],
+   "faca": [
+    "Usar SBAR em mudança clínica, pedido de avaliação e passagem de plantão.",
+    "Repetir de volta valores e ordens críticas.",
+    "Definir responsável e horário para cada pendência.",
+    "Conferir à beira do leito infusões e dispositivos quando seguro.",
+    "Registrar data, hora, profissionais e confirmação."
+   ],
+   "naofaca": [
+    "Dizer \"está ruim\" sem sinais vitais e dados.",
+    "Considerar recebida uma mensagem que ninguém confirmou.",
+    "Copiar o texto do plantão anterior sem reavaliar.",
+    "Discutir dados sensíveis em enfermaria coletiva.",
+    "Usar contas pessoais de aplicativo como canal oficial."
+   ],
+   "consulta": [
+    [
+     "S – Situação",
+     "Problema atual, gravidade, suportes, alergias, precauções"
+    ],
+    [
+     "B – Antecedentes",
+     "Diagnósticos, comorbidades, procedimentos, culturas, antimicrobianos, dispositivos"
+    ],
+    [
+     "A – Avaliação",
+     "Sinais vitais e tendência, consciência, dor, diurese, pele, acessos, exames"
+    ],
+    [
+     "R – Recomendação",
+     "Próximos cuidados, horários críticos, critérios de acionamento, pendências"
+    ],
+    [
+     "Mensagem crítica",
+     "Circuito fechado: repetir e confirmar"
+    ],
+    [
+     "Ordem verbal",
+     "Só em urgência; repetir e formalizar depois"
+    ],
+    [
+     "Sem resposta na deterioração",
+     "Substituto → coordenação → direção de plantão"
+    ],
+    [
+     "Sistema fora do ar",
+     "Contato presencial + formulário de contingência"
+    ]
+   ],
+   "cards": [
+    [
+     "O que significa cada letra do SBAR?",
+     "Situação, Antecedentes (Background), Avaliação e Recomendação."
+    ],
+    [
+     "O que é comunicação em circuito fechado?",
+     "O receptor repete a mensagem e o emissor confirma ou corrige."
+    ],
+    [
+     "Resultado crítico pode ser encerrado só porque está no sistema?",
+     "Não. Precisa ser comunicado, confirmado, registrado e ter conduta acompanhada."
+    ],
+    [
+     "Como registrar um dado que você não confirmou?",
+     "Como \"não confirmado\" ou \"pendente\", com responsável por buscá-lo."
+    ]
+   ],
    "quiz_url": "",
-   "pop_url": ""
+   "pop_url": "",
+   "objetivos": [
+    "Organizar informações clínicas no formato SBAR.",
+    "Confirmar mensagens críticas por circuito fechado.",
+    "Fazer a passagem de plantão e a transferência de cuidado com pendências definidas."
+   ],
+   "passos": [
+    "Antes do fim do turno, avalie os pacientes e atualize o instrumento SBAR com data, hora e autoria.",
+    "Escolha local e momento com poucas interrupções, mantendo a cobertura do setor. Comece pelos pacientes instáveis.",
+    "Identifique o paciente por nome completo e data de nascimento (leito só como localização) e os profissionais que entregam e recebem.",
+    "S: motivo da internação, condição atual, gravidade, suportes, alergias e precauções.",
+    "B: diagnósticos, comorbidades, procedimentos, culturas, antimicrobianos e dispositivos.",
+    "A: sinais vitais e tendências, consciência, dor, ventilação, diurese, pele, risco de queda, acessos e exames críticos.",
+    "R: próximos cuidados, medicações com horário crítico, critérios de acionamento e quem acompanha cada pendência.",
+    "Quando seguro, confira à beira do leito: identidade, infusões, bombas, acessos e dispositivos.",
+    "O receptor repete os riscos imediatos e as pendências prioritárias. Registre horário e confirmação do recebimento."
+   ],
+   "casos": [
+    [
+     "O laboratório liga informando potássio de 6,8 mEq/L de um paciente.",
+     "Repita nome, data de nascimento, exame, valor e unidade; o laboratório confirma. Registre horário e quem informou, comunique o médico responsável e acompanhe a conduta."
+    ],
+    [
+     "Médico passa por telefone uma prescrição urgente de medicamento.",
+     "Anote e repita medicamento, dose, unidade, via e frequência; o médico confirma. Ele deve formalizar no prontuário assim que possível. Se não ficou claro, esclareça antes de administrar."
+    ],
+    [
+     "Paciente piora e o médico não atende o telefone.",
+     "Inicie as medidas cabíveis e escale pela cadeia de acionamento: substituto, coordenação e direção de plantão. Registre as tentativas."
+    ],
+    [
+     "Na passagem de plantão você não sabe se o paciente tem alergia.",
+     "Registre como \"não confirmado/pendente\" e defina quem vai investigar. Nunca escreva \"sem alergias\" sem investigar."
+    ]
+   ]
   },
   {
    "codigo": "MS-03",
    "trilha": "metas",
    "titulo": "Segurança na prescrição, uso e administração de medicamentos",
-   "resumo": "Os certos da medicação, alta vigilância, insulinas, multidoses e conciliação.",
-   "pop": "POP 057; 058; 061; 050; 051; 052; 060",
-   "versao": "",
+   "resumo": "Os certos da administração, medicamentos de alta vigilância, dupla checagem e identificação de soluções.",
+   "pop": "POP 057; POP 061; POP 050",
+   "versao": "1.0",
    "publico": "Enfermeiro(a);Técnico(a) de enfermagem;Médico(a);Fisioterapeuta;Estagiário(a);Farmacêutico(a);Auxiliar de farmácia",
    "tempo": 20,
-   "status": "Em preparação",
-   "atualizado": "",
-   "porque": "",
-   "pontos": [],
-   "faca": [],
-   "naofaca": [],
-   "consulta": [],
-   "cards": [],
+   "status": "Ativo",
+   "atualizado": "2026-10-26",
+   "porque": "Falhas em qualquer etapa – prescrição, dispensação, preparo, administração e monitoramento – podem causar dano grave. Os erros com medicamentos de alta vigilância não são os mais frequentes, mas quando acontecem podem causar lesão permanente ou óbito.",
+   "pontos": [
+    "Antes de administrar, confira: paciente, medicamento, dose, via, horário, registro, indicação, forma e resposta esperada. Dois identificadores com pulseira e prescrição.",
+    "Alta vigilância (MPP): eletrólitos concentrados, insulinas, anticoagulantes, vasoativos, opioides, sedativos e bloqueadores neuromusculares, entre outros. Ficam separados, com etiqueta vermelha \"ALTA VIGILÂNCIA\".",
+    "Dupla checagem independente: dois profissionais conferem cada um sozinho paciente, medicamento, dose, concentração, via, velocidade e bomba. Registre os dois nomes.",
+    "Cloreto de potássio nunca em bolus nem sem diluição. Infusão contínua de MPP sempre em bomba de infusão.",
+    "Identifique toda solução e seringa logo após o preparo (paciente, medicamento, dose, diluente, via, horário, responsável). Seringa sem identificação não é usada.",
+    "Na dúvida, rasura ou dose inesperada, esclareça antes de administrar. Nunca corrija por suposição."
+   ],
+   "faca": [
+    "Conferir os certos à beira do leito, com dois identificadores.",
+    "Dupla checagem independente nos medicamentos (DC).",
+    "Identificar solução e seringa logo após o preparo.",
+    "Usar bomba de infusão para MPP em infusão contínua.",
+    "Notificar erro ou quase erro ao NSP."
+   ],
+   "naofaca": [
+    "Administrar com dúvida na prescrição.",
+    "Usar \"U\" para unidade ou decimal sem zero à esquerda (,5 mg).",
+    "Guardar medicamentos parecidos lado a lado.",
+    "Dar cloreto de potássio em bolus ou sem diluição.",
+    "Registrar a administração antes de fazê-la."
+   ],
+   "consulta": [
+    [
+     "Eletrólitos concentrados",
+     "KCl 19,1%, NaCl 20%, fosfato de potássio, MgSO4 50%, glicose 50%"
+    ],
+    [
+     "Onde ficam os eletrólitos",
+     "Farmácia; nas unidades só UTI e carro de urgência (estoque mínimo)"
+    ],
+    [
+     "Bloqueadores neuromusculares",
+     "Etiqueta \"PARALISANTE – CAUSA PARADA RESPIRATÓRIA\"; só UTI, CC e kit de intubação"
+    ],
+    [
+     "Insulina em infusão contínua",
+     "Glicemia capilar a cada 1 h até estabilizar"
+    ],
+    [
+     "Anticoagulantes",
+     "Observar sangramento a cada turno"
+    ],
+    [
+     "Drogas vasoativas",
+     "PA e FC contínuas; vigiar extravasamento"
+    ],
+    [
+     "Opioides e sedativos",
+     "Consciência, FR e SpO2"
+    ],
+    [
+     "Dupla checagem (DC)",
+     "No preparo, na bomba, a cada troca de seringa/frasco e mudança de dose"
+    ]
+   ],
+   "cards": [
+    [
+     "O que é dupla checagem independente?",
+     "Dois profissionais conferem cada um sozinho paciente, medicamento, dose, concentração, via, velocidade e bomba, e depois comparam."
+    ],
+    [
+     "Como se escreve meio miligrama?",
+     "0,5 mg – com zero à esquerda."
+    ],
+    [
+     "Onde ficam os bloqueadores neuromusculares?",
+     "Separados, com etiqueta de paralisante, só na UTI, no Centro Cirúrgico e no kit de intubação."
+    ],
+    [
+     "O que fazer diante de um erro de medicação?",
+     "Interromper, avaliar, comunicar o médico e notificar o NSP."
+    ]
+   ],
    "quiz_url": "",
-   "pop_url": ""
+   "pop_url": "",
+   "objetivos": [
+    "Conferir os certos antes de administrar qualquer medicamento.",
+    "Reconhecer os medicamentos potencialmente perigosos (alta vigilância) do HOSPESC e aplicar a dupla checagem.",
+    "Identificar corretamente soluções e seringas e agir diante de um erro."
+   ],
+   "passos": [
+    "Higienize as mãos e prepare em área limpa, um medicamento por vez, sem interrupções.",
+    "Confira diluição, compatibilidade, concentração final, via e dispositivo.",
+    "Identifique imediatamente a solução ou seringa (com \"ALTA VIGILÂNCIA\" quando for MPP).",
+    "Se o medicamento for marcado (DC), faça a dupla checagem independente no preparo e na bomba.",
+    "À beira do leito, confirme dois identificadores com pulseira e prescrição e pergunte sobre alergias.",
+    "Percorra a linha da bolsa até o acesso, verificando via, conexões e permeabilidade.",
+    "Administre, registre com o horário efetivo e monitore a resposta (glicemia, sedação, respiração, PA, sangramento)."
+   ],
+   "casos": [
+    [
+     "A prescrição traz \"Insulina regular 10U\".",
+     "Não administre por suposição: \"U\" pode ser lido como zero. Peça ao prescritor que escreva a unidade por extenso."
+    ],
+    [
+     "Você precisa trocar a seringa de noradrenalina em bomba.",
+     "Faça a dupla checagem independente na troca de seringa e na programação da bomba, e registre o nome dos dois profissionais."
+    ],
+    [
+     "Você encontra no posto uma seringa com líquido sem etiqueta.",
+     "Não use. Descarte conforme a rotina e comunique o enfermeiro."
+    ],
+    [
+     "Você percebe que administrou a dose errada.",
+     "Interrompa se ainda estiver correndo, avalie o paciente, comunique o médico imediatamente e notifique o NSP. Preserve embalagem e registros."
+    ]
+   ]
   },
   {
    "codigo": "MS-04",
    "trilha": "metas",
    "titulo": "Cirurgia segura",
-   "resumo": "Lista de verificação nas três etapas da cirurgia.",
+   "resumo": "Lista de verificação em três momentos: entrada, pausa cirúrgica e saída.",
    "pop": "POP 053; FORM 001",
-   "versao": "",
+   "versao": "1.0",
    "publico": "Enfermeiro(a);Técnico(a) de enfermagem;Médico(a)",
-   "tempo": 10,
-   "status": "Em preparação",
-   "atualizado": "",
-   "porque": "",
-   "pontos": [],
-   "faca": [],
-   "naofaca": [],
-   "consulta": [],
-   "cards": [],
+   "tempo": 15,
+   "status": "Ativo",
+   "atualizado": "2026-10-26",
+   "porque": "Cirurgia no paciente, no lado ou no procedimento errado, compressa esquecida e falhas de preparo anestésico são evitáveis com verificações compartilhadas. O checklist só funciona se representar conferências realmente feitas em voz alta pela equipe, e não apenas papel preenchido.",
+   "pontos": [
+    "Três momentos: ENTRADA (antes da indução), PAUSA CIRÚRGICA (imediatamente antes da incisão) e SAÍDA (antes de o paciente deixar a sala).",
+    "Identidade sempre por nome completo e data de nascimento, conferidos com pulseira, prontuário e o paciente. Leito não é identificador.",
+    "Demarcar o sítio quando houver lateralidade, múltiplas estruturas ou níveis, de preferência com o paciente acordado.",
+    "Divergência de identidade ou sítio, falta de recurso essencial ou documento inconsistente impede seguir com cirurgia eletiva até corrigir.",
+    "Antibiótico profilático, quando indicado, nos 60 minutos antes da incisão, com horário registrado.",
+    "Contagem divergente: avise o cirurgião, interrompa o fechamento eletivo, recontem e procurem. Não declare contagem correta sem resolver."
+   ],
+   "faca": [
+    "Fazer a pausa com todos parados e atentos.",
+    "Ler em voz alta a identificação das amostras.",
+    "Registrar o horário do antibiótico profilático.",
+    "Interromper diante de qualquer risco: todo membro pode pedir parada.",
+    "Transferir o cuidado por SBAR."
+   ],
+   "naofaca": [
+    "Preencher o checklist sem a conferência verbal.",
+    "Usar o leito como identificador.",
+    "Iniciar cirurgia eletiva com divergência de sítio.",
+    "Fechar com contagem divergente não resolvida.",
+    "Estender antibiótico só porque há dreno."
+   ],
+   "consulta": [
+    [
+     "Entrada",
+     "Antes da indução anestésica"
+    ],
+    [
+     "Pausa cirúrgica",
+     "Imediatamente antes da incisão"
+    ],
+    [
+     "Saída",
+     "Antes de o paciente deixar a sala"
+    ],
+    [
+     "Demarcação do sítio",
+     "Lateralidade, múltiplas estruturas ou níveis"
+    ],
+    [
+     "Perda sanguínea > 500 mL (adulto)",
+     "Discutir acesso e reposição na entrada"
+    ],
+    [
+     "Antibiótico profilático",
+     "Até 60 min antes da incisão"
+    ],
+    [
+     "Contagem",
+     "Compressas, instrumentos e perfurocortantes; antes do fechamento e na troca de equipe"
+    ]
+   ],
+   "cards": [
+    [
+     "Quais são os três momentos da lista?",
+     "Entrada, pausa cirúrgica e saída."
+    ],
+    [
+     "Quando a cirurgia eletiva não pode prosseguir?",
+     "Com divergência de identidade ou sítio, falta de recurso essencial ou documento inconsistente."
+    ],
+    [
+     "Quem pode pedir interrupção?",
+     "Qualquer membro da equipe diante de risco."
+    ]
+   ],
    "quiz_url": "",
-   "pop_url": ""
+   "pop_url": "",
+   "objetivos": [
+    "Aplicar a lista de cirurgia segura nas três fases com conferência verbal.",
+    "Demarcar o sítio cirúrgico quando houver lateralidade.",
+    "Agir diante de divergências e de contagem incorreta."
+   ],
+   "passos": [
+    "Preparo: confira identidade, procedimento, lateralidade, jejum, alergias, exames, consentimento, próteses e materiais.",
+    "Demarcação do sítio pela equipe cirúrgica, quando indicada.",
+    "ENTRADA: identidade, procedimento, sítio, consentimento, demarcação, checagem anestésica, oxímetro, alergias, via aérea difícil e risco de sangramento (> 500 mL exige preparo).",
+    "PAUSA: toda a equipe para; apresentação por nome e função; confirmar paciente, procedimento e sítio; riscos do cirurgião e do anestesiologista; esterilidade; profilaxia; imagens.",
+    "Durante: posicionamento, proteção de pele, olhos e temperatura, segurança da eletrocirurgia, contagens.",
+    "SAÍDA: procedimento realizado, contagens, identificação das amostras lida em voz alta, problemas de equipamento, plano de recuperação.",
+    "Transfira o cuidado por SBAR e arquive a lista com horários e profissionais."
+   ],
+   "casos": [
+    [
+     "Na entrada, o consentimento está assinado para joelho esquerdo e a demarcação está no direito.",
+     "Cirurgia eletiva não segue. Esclareça com o cirurgião e o paciente, corrija a documentação e a demarcação antes de prosseguir."
+    ],
+    [
+     "Ao final, falta uma compressa na contagem.",
+     "Avise o cirurgião, interrompa o fechamento eletivo, repita a contagem e procure na sala e no campo. Siga avaliação médica, inclusive imagem, e registre tudo."
+    ],
+    [
+     "Cirurgia de emergência com risco de morte.",
+     "A equipe faz as verificações possíveis sem atrasar a intervenção salvadora e registra o motivo e as medidas compensatórias."
+    ]
+   ]
   },
   {
    "codigo": "MS-05",
    "trilha": "metas",
    "titulo": "Higiene das mãos",
-   "resumo": "Os 5 momentos, técnica e antissepsia cirúrgica das mãos.",
+   "resumo": "Os 5 momentos, técnica com água e sabonete ou álcool e antissepsia cirúrgica.",
    "pop": "POP 019; POP 021",
-   "versao": "",
+   "versao": "2.0",
    "publico": "TODAS",
    "tempo": 10,
-   "status": "Em preparação",
-   "atualizado": "",
-   "porque": "",
-   "pontos": [],
-   "faca": [],
-   "naofaca": [],
-   "consulta": [],
-   "cards": [],
+   "status": "Ativo",
+   "atualizado": "2026-10-26",
+   "porque": "A higiene das mãos é a medida isolada de maior impacto na prevenção das infecções relacionadas à assistência e no controle da resistência microbiana. Ela interrompe a transmissão cruzada de microrganismos entre pacientes, profissionais e ambiente.",
+   "pontos": [
+    "5 momentos: antes de tocar o paciente; antes de procedimento limpo ou asséptico; após risco de exposição a fluidos; após tocar o paciente; após tocar superfícies e objetos próximos ao paciente.",
+    "Álcool (mínimo 60%) quando as mãos não estiverem visivelmente sujas: 20 a 30 segundos, até secar, sem papel-toalha.",
+    "Água e sabonete quando houver sujidade visível: 40 a 60 segundos, secando com papel-toalha e fechando a torneira com a última folha.",
+    "Luva não substitui a higiene das mãos: higienize antes de calçar e logo após retirar.",
+    "Sem adornos (anéis, alianças, pulseiras, relógios), unhas curtas, limpas e sem unhas postiças (NR-32)."
+   ],
+   "faca": [
+    "Usar álcool nos 5 momentos quando as mãos estiverem visivelmente limpas.",
+    "Lavar com água e sabonete quando houver sujidade.",
+    "Higienizar antes de calçar e após retirar as luvas.",
+    "Manter unhas curtas e sem adornos.",
+    "Escovar só as unhas na antissepsia cirúrgica."
+   ],
+   "naofaca": [
+    "Usar álcool e sabonete ao mesmo tempo (aumenta dermatite).",
+    "Secar com toalha de tecido.",
+    "Usar unhas postiças.",
+    "Achar que a luva dispensa a higiene das mãos.",
+    "Escovar a pele na antissepsia cirúrgica."
+   ],
+   "consulta": [
+    [
+     "Preparação alcoólica",
+     "20 a 30 s; mínimo 60% de álcool; sem papel-toalha"
+    ],
+    [
+     "Água e sabonete",
+     "40 a 60 s; quando houver sujidade visível"
+    ],
+    [
+     "Antissepsia cirúrgica – 1ª cirurgia",
+     "3 a 5 min"
+    ],
+    [
+     "Antissepsia cirúrgica – seguintes",
+     "2 a 3 min"
+    ],
+    [
+     "Produtos da antissepsia cirúrgica",
+     "Clorexidina degermante, PVPI ou produto à base de álcool"
+    ],
+    [
+     "Secagem cirúrgica",
+     "Compressa estéril, dos dedos ao cotovelo, sem esfregar"
+    ]
+   ],
+   "cards": [
+    [
+     "Quais são os 5 momentos?",
+     "Antes de tocar o paciente, antes de procedimento asséptico, após risco de fluidos, após tocar o paciente e após tocar o entorno."
+    ],
+    [
+     "Quanto tempo leva a fricção com álcool?",
+     "20 a 30 segundos, até as mãos secarem."
+    ],
+    [
+     "E com água e sabonete?",
+     "40 a 60 segundos."
+    ],
+    [
+     "O que escovar na antissepsia cirúrgica?",
+     "Só as unhas. Escovar a pele causa microlesões."
+    ]
+   ],
    "quiz_url": "",
-   "pop_url": ""
+   "pop_url": "",
+   "objetivos": [
+    "Reconhecer os 5 momentos para a higiene das mãos.",
+    "Executar a técnica com água e sabonete e com preparação alcoólica no tempo correto.",
+    "Conhecer as regras de adornos, unhas e antissepsia cirúrgica."
+   ],
+   "passos": [
+    "Retire adornos.",
+    "Molhe as mãos e aplique sabonete líquido (ou uma dose de álcool na palma em concha).",
+    "Friccione palma com palma.",
+    "Friccione o dorso de cada mão, entrelaçando os dedos.",
+    "Friccione os espaços interdigitais.",
+    "Friccione os polegares com movimento circular.",
+    "Friccione as pontas dos dedos e unhas contra a palma oposta.",
+    "Com sabonete: enxágue e seque com papel-toalha. Com álcool: friccione até secar."
+   ],
+   "casos": [
+    [
+     "Você vai puncionar um acesso venoso e está com as mãos limpas.",
+     "Higienize com preparação alcoólica antes do procedimento (momento 2) e antes de calçar as luvas."
+    ],
+    [
+     "Você acabou de trocar uma fralda com fezes.",
+     "Retire as luvas e lave as mãos com água e sabonete (sujidade e exposição a fluidos)."
+    ],
+    [
+     "Você só ajustou o soro e tocou a grade da cama, sem tocar o paciente.",
+     "Higienize ao sair: momento 5, após tocar superfícies próximas ao paciente."
+    ]
+   ]
   },
   {
    "codigo": "MS-06",
    "trilha": "metas",
    "titulo": "Prevenção de quedas e lesão por pressão",
-   "resumo": "Escala de Morse, medidas por risco, atendimento pós-queda e prevenção de LPP.",
+   "resumo": "Escala de Morse, medidas por risco, atendimento pós-queda e prevenção de LPP com a escala de Braden.",
    "pop": "POP 045; POP 054",
    "versao": "2.0",
    "publico": "Enfermeiro(a);Técnico(a) de enfermagem;Médico(a);Fisioterapeuta;Estagiário(a)",
-   "tempo": 10,
-   "status": "Em preparação",
-   "atualizado": "",
-   "porque": "",
-   "pontos": [],
-   "faca": [],
-   "naofaca": [],
-   "consulta": [],
-   "cards": [],
+   "tempo": 20,
+   "status": "Ativo",
+   "atualizado": "2026-10-26",
+   "porque": "Quedas e lesões por pressão estão entre os eventos adversos mais frequentes nos hospitais. Ambas aumentam o tempo de internação, a dor e o risco de morte, e grande parte pode ser evitada com avaliação de risco e medidas simples, feitas todos os dias.",
+   "pontos": [
+    "Morse na admissão (em até 24 h), diariamente e sempre que o quadro mudar. Baixo: 0–24; moderado: 25–44; alto: ≥ 45.",
+    "Para todos: cama baixa e travada, campainha ao alcance, piso seco, calçado antiderrapante e orientação para pedir ajuda ao levantar.",
+    "Risco alto: pulseira AMARELA \"RISCO DE QUEDA\", identificação no leito, acompanhamento ao banheiro e revisão de medicamentos.",
+    "Após uma queda: não mova o paciente antes de avaliar; suspeita de lesão de coluna ou quadril, imobilize e aguarde o médico. Notifique ao NSP em até 24 h.",
+    "LPP: escala de Braden na admissão e ao menos diariamente; inspeção da pele a cada turno nos pacientes de risco.",
+    "Reposicionamento individual, em geral a cada 2 a 3 horas; calcâneos livres de pressão; nada de arrastar o paciente nem almofada em anel."
+   ],
+   "faca": [
+    "Avaliar Morse e Braden na admissão e diariamente.",
+    "Manter cama baixa, travada e campainha ao alcance.",
+    "Acompanhar ao banheiro o paciente de alto risco.",
+    "Manter calcâneos livres de pressão.",
+    "Notificar toda queda e toda LPP adquirida ao NSP."
+   ],
+   "naofaca": [
+    "Levantar o paciente caído antes de avaliar lesões.",
+    "Usar a grade como substituto da vigilância.",
+    "Arrastar o paciente na cama.",
+    "Usar almofada em anel ou massagear área avermelhada.",
+    "Passar sonda vesical só para facilitar a higiene."
+   ],
+   "consulta": [
+    [
+     "Morse – baixo risco",
+     "0 a 24"
+    ],
+    [
+     "Morse – risco moderado",
+     "25 a 44"
+    ],
+    [
+     "Morse – risco alto",
+     "≥ 45: pulseira amarela \"RISCO DE QUEDA\""
+    ],
+    [
+     "Vigilância neurológica pós-queda",
+     "30/30 min por 2 h; 1/1 h por 4 h; 2/2 h até 24 h"
+    ],
+    [
+     "Notificação de queda",
+     "NSP em até 24 h"
+    ],
+    [
+     "Braden – menor risco",
+     "19 a 23"
+    ],
+    [
+     "Braden – alto / muito alto",
+     "10 a 12 / ≤ 9"
+    ],
+    [
+     "Reposicionamento",
+     "Em geral 2 a 3 h, ajustado ao paciente"
+    ],
+    [
+     "Lateralização",
+     "Cerca de 30°, sem apoiar sobre a lesão"
+    ]
+   ],
+   "cards": [
+    [
+     "A partir de que pontuação de Morse o risco é alto?",
+     "45 pontos ou mais."
+    ],
+    [
+     "Qual a cor da pulseira de risco de queda?",
+     "Amarela, com \"RISCO DE QUEDA\"."
+    ],
+    [
+     "Qual o intervalo inicial de reposicionamento?",
+     "Em geral 2 a 3 horas, ajustado à avaliação."
+    ],
+    [
+     "Pode massagear área com vermelhidão persistente?",
+     "Não. Também não usar almofada em anel."
+    ]
+   ],
    "quiz_url": "",
-   "pop_url": ""
+   "pop_url": "",
+   "objetivos": [
+    "Avaliar o risco de queda pela Escala de Morse e aplicar as medidas por nível de risco.",
+    "Atender corretamente o paciente que caiu.",
+    "Avaliar o risco de LPP pela escala de Braden e executar o plano de reposicionamento."
+   ],
+   "passos": [
+    "Aplique Morse e Braden na admissão e registre.",
+    "Aplique as medidas universais de prevenção de quedas a todos os pacientes.",
+    "Risco de queda moderado ou alto: medidas adicionais; alto: pulseira amarela e placa.",
+    "Risco de LPP: inspecione a pele a cada turno, inclusive sob dispositivos.",
+    "Prescreva e execute o plano de reposicionamento (posição, intervalo, superfície, responsável).",
+    "Controle umidade e incontinência; mantenha calcâneos suspensos.",
+    "Reavalie diariamente e sempre que o quadro mudar."
+   ],
+   "casos": [
+    [
+     "Paciente de 78 anos, Morse 55, quer ir ao banheiro à noite.",
+     "Risco alto: deve estar com pulseira amarela, e ser acompanhado ao banheiro ou receber comadre/papagaio. Levantar em etapas: sentar, aguardar e só então ficar em pé."
+    ],
+    [
+     "Você encontra um paciente caído, sem saber como caiu, que usa anticoagulante.",
+     "Chame ajuda, avalie antes de mover, verifique sinais vitais, glicemia e Glasgow. Queda não presenciada com anticoagulante exige vigilância neurológica por 24 h e avaliação médica prioritária."
+    ],
+    [
+     "Paciente em VM com hipotensão grave não tolera virar de lado.",
+     "Discuta com a equipe médica, faça pequenos deslocamentos tolerados, registre o impedimento e reavalie. Superfície especial não dispensa reposicionar."
+    ]
+   ]
   },
   {
    "codigo": "IRAS-01",
@@ -307,7 +890,34 @@
     ]
    ],
    "quiz_url": "",
-   "pop_url": ""
+   "pop_url": "",
+   "objetivos": [
+    "Aplicar as medidas gerais de prevenção de IRAS no dia a dia.",
+    "Executar os pacotes de prevenção de PAV, ITU associada a cateter, infecção de corrente sanguínea e de sítio cirúrgico.",
+    "Conhecer os prazos de troca de dispositivos adotados no HOSPESC."
+   ],
+   "passos": [
+    "Higienize as mãos antes e depois de cada contato com o paciente ou dispositivo.",
+    "Revise com a equipe, todo dia, a necessidade de cada cateter, sonda e tubo.",
+    "Ventilação mecânica: cabeceira 30–45°, cuff 25–30 cmH₂O, higiene bucal com clorexidina 0,12%, sedação revista.",
+    "Sonda vesical: sistema fechado, bolsa abaixo da bexiga, higiene do meato.",
+    "Cateteres venosos: desinfete o conector antes de cada acesso; troque a gaze do cateter central a cada 24 h.",
+    "Registre data de inserção e de troca de todos os dispositivos."
+   ],
+   "casos": [
+    [
+     "Paciente em VM está com a cabeceira a 10° após o banho.",
+     "Volte a cabeceira para 30–45° assim que terminar o cuidado, salvo contraindicação, e confira o cuff."
+    ],
+    [
+     "A bolsa coletora da sonda vesical está sobre a cama, na altura do abdome.",
+     "Posicione abaixo do nível da bexiga, sem tocar o chão, e verifique se o fluxo está livre."
+    ],
+    [
+     "O curativo transparente do cateter central está descolando no 3º dia.",
+     "Troque imediatamente: qualquer cobertura suja, solta ou úmida é trocada na hora, independentemente do prazo."
+    ]
+   ]
   },
   {
    "codigo": "IRAS-02",
@@ -327,7 +937,10 @@
    "consulta": [],
    "cards": [],
    "quiz_url": "",
-   "pop_url": ""
+   "pop_url": "",
+   "objetivos": [],
+   "passos": [],
+   "casos": []
   },
   {
    "codigo": "IRAS-03",
@@ -347,7 +960,10 @@
    "consulta": [],
    "cards": [],
    "quiz_url": "",
-   "pop_url": ""
+   "pop_url": "",
+   "objetivos": [],
+   "passos": [],
+   "casos": []
   },
   {
    "codigo": "IRAS-04",
@@ -367,7 +983,10 @@
    "consulta": [],
    "cards": [],
    "quiz_url": "",
-   "pop_url": ""
+   "pop_url": "",
+   "objetivos": [],
+   "passos": [],
+   "casos": []
   },
   {
    "codigo": "IRAS-05",
@@ -387,7 +1006,10 @@
    "consulta": [],
    "cards": [],
    "quiz_url": "",
-   "pop_url": ""
+   "pop_url": "",
+   "objetivos": [],
+   "passos": [],
+   "casos": []
   },
   {
    "codigo": "IRAS-06",
@@ -407,7 +1029,10 @@
    "consulta": [],
    "cards": [],
    "quiz_url": "",
-   "pop_url": ""
+   "pop_url": "",
+   "objetivos": [],
+   "passos": [],
+   "casos": []
   },
   {
    "codigo": "PE-01",
@@ -427,7 +1052,10 @@
    "consulta": [],
    "cards": [],
    "quiz_url": "",
-   "pop_url": ""
+   "pop_url": "",
+   "objetivos": [],
+   "passos": [],
+   "casos": []
   },
   {
    "codigo": "PE-02",
@@ -447,7 +1075,10 @@
    "consulta": [],
    "cards": [],
    "quiz_url": "",
-   "pop_url": ""
+   "pop_url": "",
+   "objetivos": [],
+   "passos": [],
+   "casos": []
   },
   {
    "codigo": "PE-03",
@@ -467,7 +1098,10 @@
    "consulta": [],
    "cards": [],
    "quiz_url": "",
-   "pop_url": ""
+   "pop_url": "",
+   "objetivos": [],
+   "passos": [],
+   "casos": []
   },
   {
    "codigo": "PE-04",
@@ -487,7 +1121,10 @@
    "consulta": [],
    "cards": [],
    "quiz_url": "",
-   "pop_url": ""
+   "pop_url": "",
+   "objetivos": [],
+   "passos": [],
+   "casos": []
   },
   {
    "codigo": "PE-05",
@@ -507,7 +1144,10 @@
    "consulta": [],
    "cards": [],
    "quiz_url": "",
-   "pop_url": ""
+   "pop_url": "",
+   "objetivos": [],
+   "passos": [],
+   "casos": []
   },
   {
    "codigo": "PE-06",
@@ -527,7 +1167,10 @@
    "consulta": [],
    "cards": [],
    "quiz_url": "",
-   "pop_url": ""
+   "pop_url": "",
+   "objetivos": [],
+   "passos": [],
+   "casos": []
   },
   {
    "codigo": "PE-07",
@@ -547,7 +1190,10 @@
    "consulta": [],
    "cards": [],
    "quiz_url": "",
-   "pop_url": ""
+   "pop_url": "",
+   "objetivos": [],
+   "passos": [],
+   "casos": []
   },
   {
    "codigo": "URG-01",
@@ -567,7 +1213,10 @@
    "consulta": [],
    "cards": [],
    "quiz_url": "",
-   "pop_url": "https://drive.google.com/file/d/1mTSb2984mvLC-aaqoImZDkTWfvhd10ya/view"
+   "pop_url": "https://drive.google.com/file/d/1mTSb2984mvLC-aaqoImZDkTWfvhd10ya/view",
+   "objetivos": [],
+   "passos": [],
+   "casos": []
   },
   {
    "codigo": "URG-02",
@@ -587,7 +1236,10 @@
    "consulta": [],
    "cards": [],
    "quiz_url": "",
-   "pop_url": ""
+   "pop_url": "",
+   "objetivos": [],
+   "passos": [],
+   "casos": []
   },
   {
    "codigo": "URG-03",
@@ -607,7 +1259,10 @@
    "consulta": [],
    "cards": [],
    "quiz_url": "",
-   "pop_url": ""
+   "pop_url": "",
+   "objetivos": [],
+   "passos": [],
+   "casos": []
   },
   {
    "codigo": "URG-04",
@@ -627,7 +1282,10 @@
    "consulta": [],
    "cards": [],
    "quiz_url": "",
-   "pop_url": ""
+   "pop_url": "",
+   "objetivos": [],
+   "passos": [],
+   "casos": []
   },
   {
    "codigo": "LIMP-01",
@@ -647,7 +1305,10 @@
    "consulta": [],
    "cards": [],
    "quiz_url": "",
-   "pop_url": ""
+   "pop_url": "",
+   "objetivos": [],
+   "passos": [],
+   "casos": []
   },
   {
    "codigo": "LIMP-02",
@@ -667,7 +1328,10 @@
    "consulta": [],
    "cards": [],
    "quiz_url": "",
-   "pop_url": ""
+   "pop_url": "",
+   "objetivos": [],
+   "passos": [],
+   "casos": []
   },
   {
    "codigo": "LIMP-03",
@@ -687,7 +1351,10 @@
    "consulta": [],
    "cards": [],
    "quiz_url": "",
-   "pop_url": ""
+   "pop_url": "",
+   "objetivos": [],
+   "passos": [],
+   "casos": []
   },
   {
    "codigo": "LIMP-04",
@@ -707,7 +1374,10 @@
    "consulta": [],
    "cards": [],
    "quiz_url": "",
-   "pop_url": ""
+   "pop_url": "",
+   "objetivos": [],
+   "passos": [],
+   "casos": []
   },
   {
    "codigo": "GEST-01",
@@ -727,7 +1397,10 @@
    "consulta": [],
    "cards": [],
    "quiz_url": "",
-   "pop_url": ""
+   "pop_url": "",
+   "objetivos": [],
+   "passos": [],
+   "casos": []
   },
   {
    "codigo": "GEST-02",
@@ -747,7 +1420,10 @@
    "consulta": [],
    "cards": [],
    "quiz_url": "",
-   "pop_url": ""
+   "pop_url": "",
+   "objetivos": [],
+   "passos": [],
+   "casos": []
   },
   {
    "codigo": "GEST-03",
@@ -767,7 +1443,10 @@
    "consulta": [],
    "cards": [],
    "quiz_url": "",
-   "pop_url": ""
+   "pop_url": "",
+   "objetivos": [],
+   "passos": [],
+   "casos": []
   },
   {
    "codigo": "GEST-04",
@@ -787,7 +1466,10 @@
    "consulta": [],
    "cards": [],
    "quiz_url": "",
-   "pop_url": ""
+   "pop_url": "",
+   "objetivos": [],
+   "passos": [],
+   "casos": []
   }
  ]
 }
